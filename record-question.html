@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>NoClue!</title>
+    <!--Változtatandó-->
+    <meta
+      name="theme-color"
+      content="#51bdec"
+    />
+    <meta
+      name="robots"
+      content="noai, noimageai"
+    />
+    <meta
+      name="robots"
+      content="noindex, follow"
+    />
+    <meta
+      name="googlebot"
+      content="noindex"
+    />
+    <meta
+      name="googlebot"
+      content="follow"
+    />
+    <meta
+      name="googlebot-news"
+      content="noindex"
+    />
+    <meta
+      name="bingbot"
+      content="noindex"
+    />
+    <meta
+      name="duckduckbot"
+      content="noindex"
+    />
+    <meta
+      name="baiduspider"
+      content="noindex"
+    />
+    <meta
+      name="yandexbot"
+      content="noindex"
+    />
+
+    <meta
+      name="application-name"
+      content="NoClue!"
+    />
+    <meta
+      name="author"
+      content="Veni DiVinci"
+    />
+    <meta
+      name="description"
+      content="Let's get you to win at Cluedo! Choose from numerous editions."
+    />
+
+    <link
+      rel="stylesheet"
+      href="code/style.css"
+    />
+    <script src="code/script.js"></script>
+    <link
+      rel="icon"
+      href="design/favicon.png"
+      type="image/png"
+    />
+    <link
+      rel="shortcut icon"
+      href="design/favicon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="design/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="index.html">
+          <img
+            src="design/logo.png"
+            alt="NoClue! logo"
+          />
+        </a>
+      </div>
+      <svg
+        id="menu-open"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960"
+        style="width: var(--navigacio-meret); height: var(--navigacio-meret); fill: var(--navigacio-masodlagos-szin)"
+      >
+        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+      </svg>
+      <svg
+        class="hidden"
+        id="menu-close"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960"
+        style="width: var(--navigacio-meret); height: var(--navigacio-meret); fill: var(--navigacio-masodlagos-szin)"
+      >
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+      </svg>
+    </header>
+    <nav class="hidden">
+      <ul>
+        <li>
+          <a href="index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+            >
+              <path d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z" />
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <a onclick='window.location.href = "mailto: info@noclue.app" + "?subject=" + encodeURIComponent("NoClue! experience")'>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+            >
+              <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+            </svg>
+            Contact
+          </a>
+        </li>
+
+        <li>
+          <a href="donate.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+            >
+              <path d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z" />
+            </svg>
+            Donate
+          </a>
+        </li>
+
+        <li>
+          <a href="disclaimer.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+            >
+              <path d="M400-320h160q17 0 28.5-11.5T600-360v-80h-80v40h-80v-160h80v40h80v-80q0-17-11.5-28.5T560-640H400q-17 0-28.5 11.5T360-600v240q0 17 11.5 28.5T400-320Zm80 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+            </svg>
+            Disclaimer
+          </a>
+        </li>
+        <hr />
+        <li id="game_menu">
+          <a href="game.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+            >
+              <path d="m272-440 208 120 208-120-168-97v137h-80v-137l-168 97Zm168-189v-17q-44-13-72-49.5T340-780q0-58 41-99t99-41q58 0 99 41t41 99q0 48-28 84.5T520-646v17l280 161q19 11 29.5 29.5T840-398v76q0 22-10.5 40.5T800-252L520-91q-19 11-40 11t-40-11L160-252q-19-11-29.5-29.5T120-322v-76q0-22 10.5-40.5T160-468l280-161Zm0 378L200-389v67l280 162 280-162v-67L520-251q-19 11-40 11t-40-11Zm40-469q25 0 42.5-17.5T540-780q0-25-17.5-42.5T480-840q-25 0-42.5 17.5T420-780q0 25 17.5 42.5T480-720Zm0 560Z" />
+            </svg>
+            Game Menu
+          </a>
+          <ul class="sublist">
+            <li onclick="if (localStorage.getItem('Question')) { localStorage.removeItem('Question'); }"><a href="record-question.html">Record question</a></li>
+            <li><a href="clue-sheet.html">Clue sheet</a></li>
+            <li><a href="discovered-card.html">Discovered card</a></li>
+            <li id="torles"><a href="delete-question.html">Delete question</a></li>
+          </ul>
+        </li>
+        <hr />
+      </ul>
+      <div id="settings">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+        >
+          <path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+        </svg>
+        Settings
+        <br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+        >
+          <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+        </svg>
+        <select id="languages"></select>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+        >
+          <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z" />
+        </svg>
+        <select id="theme">
+          <option value="1">Light</option>
+          <option value="2">Dark</option>
+        </select>
+      </div>
+    </nav>
+    <article>
+      <h2 id="dinamikus_szoveg"></h2>
+      <div id="step0"></div>
+      <div id="step1"></div>
+      <div id="step2"></div>
+      <div id="step3"></div>
+      <div id="step4"></div>
+      <div id="step5"></div>
+      <div id="step6"></div>
+    </article>
+    <div id="buttons">
+      <button class="navigation-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          style="width: var(--navigacio-meret); height: var(--navigacio-meret); fill: var(--navigacio-masodlagos-szin)"
+        >
+          <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+        </svg>
+      </button>
+      <button class="navigation-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          style="width: var(--navigacio-meret); height: var(--navigacio-meret); fill: var(--navigacio-masodlagos-szin)"
+        >
+          <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+        </svg>
+      </button>
+    </div>
+  </body>
+  <script>
+    const lepes_osszes = 6;
+    window.onload = function () {
+      forditas("EN", selected_lang);
+      step_setup = localStorage.getItem("Setup step");
+      if (!step_setup || step_setup != 3) {
+        window.location.href = "game.html";
+      }
+      mezo = localStorage.getItem("Question");
+      if (!mezo) {
+        mezo = [" ", " ", " ", " ", " "];
+        localStorage.setItem("Question", mezo);
+      }
+      lepes_helper("record question");
+    };
+
+    function lepes_0(command) {
+      szam = 0;
+      mezo = localStorage.getItem("Question").split(",");
+      kivant_mezo = mezo[szam];
+      if (command == "load") {
+        document.getElementById("dinamikus_szoveg").textContent = "Who asked?";
+        adatok = localStorage.getItem("Players").split(",");
+
+        div_creator(szam, adatok, ["tile"]);
+        selection_handler(szam);
+
+        if (kivant_mezo == " ") {
+          button_handler_uj(2, "disabled");
+        }
+        if (kivant_mezo != " ") {
+          selection_returner(szam, kivant_mezo);
+          button_handler_uj(2, "enabled");
+        }
+      }
+
+      if (command == "save") {
+        kivant_mezo = selection_returner(szam).innerHTML;
+        kivant_mezo_EN = szoveg_kereso(selected_lang, "EN", kivant_mezo) || kivant_mezo;
+
+        mezo[szam] = kivant_mezo_EN;
+        localStorage.setItem("Question", mezo);
+        selection_unhider(szam + 1);
+      }
+    }
+
+    function lepes_1(command) {
+      szam = 1;
+      mezo = localStorage.getItem("Question").split(",");
+      kivant_mezo = mezo[szam];
+      if (command == "load") {
+        document.getElementById("dinamikus_szoveg").textContent = "Room";
+        adatok = localStorage.getItem("Rooms").split(",");
+
+        div_creator(szam, adatok, ["tile"]);
+        selection_handler(szam);
+
+        if (kivant_mezo == " ") {
+          button_handler_uj(2, "disabled");
+        }
+        if (kivant_mezo != " ") {
+          selection_returner(szam, kivant_mezo);
+          button_handler_uj(2, "enabled");
+        }
+      }
+
+      if (command == "save") {
+        kivant_mezo = selection_returner(szam).innerHTML;
+        mezo[szam] = kivant_mezo;
+        localStorage.setItem("Question", mezo);
+        selection_unhider(szam + 1);
+      }
+    }
+
+    function lepes_2(command) {
+      szam = 2;
+      mezo = localStorage.getItem("Question").split(",");
+      kivant_mezo = mezo[szam];
+      if (command == "load") {
+        document.getElementById("dinamikus_szoveg").textContent = "Suspect";
+        adatok = localStorage.getItem("Suspects").split(",");
+
+        div_creator(szam, adatok, ["tile"]);
+        selection_handler(szam);
+
+        if (kivant_mezo == " ") {
+          button_handler_uj(2, "disabled");
+        }
+        if (kivant_mezo != " ") {
+          selection_returner(szam, kivant_mezo);
+          button_handler_uj(2, "enabled");
+        }
+      }
+
+      if (command == "save") {
+        kivant_mezo = selection_returner(szam).innerHTML;
+        mezo[szam] = kivant_mezo;
+        localStorage.setItem("Question", mezo);
+        selection_unhider(szam + 1);
+      }
+    }
+
+    function lepes_3(command) {
+      szam = 3;
+      mezo = localStorage.getItem("Question").split(",");
+      kivant_mezo = mezo[szam];
+      if (command == "load") {
+        document.getElementById("dinamikus_szoveg").textContent = "Weapon";
+        adatok = localStorage.getItem("Weapons").split(",");
+
+        div_creator(szam, adatok, ["tile"]);
+        selection_handler(szam);
+
+        if (kivant_mezo == " ") {
+          button_handler_uj(2, "disabled");
+        }
+        if (kivant_mezo != " ") {
+          selection_returner(szam, kivant_mezo);
+          button_handler_uj(2, "enabled");
+        }
+      }
+      if (command == "save") {
+        kivant_mezo = selection_returner(szam).innerHTML;
+        mezo[szam] = kivant_mezo;
+        localStorage.setItem("Question", mezo);
+        selection_unhider(szam + 1);
+      }
+    }
+
+    function lepes_4(command) {
+      szam = 4;
+      mezo = localStorage.getItem("Question").split(",");
+      kivant_mezo = mezo[szam];
+      if (command == "load") {
+        document.getElementById("dinamikus_szoveg").textContent = "Who showed?";
+        adatok = localStorage.getItem("Players").split(",");
+
+        adatok = adatok.filter((item) => item !== mezo[0]);
+
+        adatok.push("No one", "Discarded");
+
+        div_creator(szam, adatok, ["tile"]);
+        selection_handler(szam);
+
+        if (kivant_mezo == " ") {
+          button_handler_uj(2, "disabled");
+        }
+        if (kivant_mezo != " ") {
+          selection_returner(szam, kivant_mezo);
+          button_handler_uj(2, "enabled");
+        }
+      }
+      if (command == "save") {
+        kivant_mezo = selection_returner(szam).innerHTML;
+        kivant_mezo_EN = szoveg_kereso(selected_lang, "EN", kivant_mezo) || kivant_mezo;
+
+        mezo[szam] = kivant_mezo_EN;
+        localStorage.setItem("Question", mezo);
+
+        if (mezo[0] == "You" && mezo[4] != "No one" && mezo[4] != "Discarded") {
+          mezo.push(" ");
+          mezo = mezo.slice(0, 6);
+          localStorage.setItem("Question", mezo);
+          selection_unhider(5);
+        } else if (mezo[4] != "Discarded") {
+          mezo = mezo.slice(0, 5);
+          localStorage.setItem("Question", mezo);
+          mentes_tarhelyre();
+        } else if (mezo[4] == "Discarded") {
+          mezo.push(" ");
+          mezo = mezo.slice(0, 6);
+          localStorage.setItem("Question", mezo);
+          selection_unhider(6);
+        }
+      }
+    }
+
+    function lepes_5(command) {
+      if (command == "load") {
+        mezo = localStorage.getItem("Question").split(",");
+        kivant_mezo = mezo[5];
+        if (mezo[4] == "Discarded") {
+          selection_unhider(6);
+        }
+
+        angol_szoveg = "showed";
+        forditott_szoveg = szoveg_kereso("EN", selected_lang, angol_szoveg) || angol_szoveg;
+
+        szoveg = mezo[4] + " " + forditott_szoveg;
+        document.getElementById("dinamikus_szoveg").textContent = szoveg;
+        adatok = mezo.slice(1, 4);
+        div_creator(5, adatok, ["tile"]);
+        selection_handler(5);
+
+        if (kivant_mezo == " ") {
+          button_handler_uj(2, "disabled");
+        }
+        if (kivant_mezo != " ") {
+          selection_returner(5, kivant_mezo);
+          button_handler_uj(2, "enabled");
+        }
+      }
+      if (command == "save") {
+        kivant_mezo = selection_returner(5).innerHTML;
+        mezo = localStorage.getItem("Question").split(",");
+        mezo[5] = kivant_mezo;
+        localStorage.setItem("Question", mezo);
+        mentes_tarhelyre();
+      }
+    }
+
+    function lepes_6(command) {
+      if (command == "load") {
+        mezo = localStorage.getItem("Question").split(",");
+        kivant_mezo = mezo[5];
+
+        angol_szoveg = "Who discarded the question?";
+        forditott_szoveg = szoveg_kereso("EN", selected_lang, angol_szoveg) || angol_szoveg;
+
+        document.getElementById("dinamikus_szoveg").textContent = forditott_szoveg;
+        adatok = localStorage.getItem("Players").split(",");
+        adatok = adatok.filter((item) => item !== mezo[0]);
+        div_creator(6, adatok, ["tile"]);
+        selection_handler(6);
+
+        if (kivant_mezo == " ") {
+          button_handler_uj(2, "disabled");
+        }
+        if (kivant_mezo != " ") {
+          selection_returner(6, kivant_mezo);
+          button_handler_uj(2, "enabled");
+        }
+      }
+      if (command == "save") {
+        kivant_mezo = selection_returner(6).innerHTML;
+        kivant_mezo_EN = szoveg_kereso(selected_lang, "EN", kivant_mezo) || kivant_mezo;
+        mezo = localStorage.getItem("Question").split(",");
+        mezo[5] = kivant_mezo_EN;
+        localStorage.setItem("Question", mezo);
+        mentes_tarhelyre();
+      }
+    }
+
+    function mentes_tarhelyre() {
+      mezo_listaja = localStorage.getItem("Questions");
+      mezo = localStorage.getItem("Question");
+
+      if (!mezo_listaja) {
+        localStorage.setItem("Questions", mezo);
+      }
+      if (mezo_listaja) {
+        mezo_listaja = mezo_listaja.split(";");
+        mezo_listaja.push(mezo);
+        localStorage.setItem("Questions", mezo_listaja.join(";"));
+      }
+      window.location.href = "game.html";
+      localStorage.removeItem("Question");
+    }
+  </script>
+</html>
