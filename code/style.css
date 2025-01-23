@@ -273,11 +273,15 @@ table tr:first-child {
 table td:first-child {
   width: 25%;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 table td:not(:first-child) {
   text-align: center;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 table tr:hover,
