@@ -129,6 +129,7 @@ h2 {
   transition: var(--animacio);
   color: var(--konstans-fekete);
   font-size: 1.2em;
+  text-overflow: ellipsis;
 }
 
 .subtile {
