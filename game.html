@@ -7,11 +7,6 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>NoClue!</title>
-    <!--Változtatandó-->
-    <meta
-      name="theme-color"
-      content="#51bdec"
-    />
     <meta
       name="robots"
       content="noai, noimageai"
@@ -516,16 +511,18 @@
 
       let dragged_item = null;
 
-      // Mouse drag start
-      input_container.addEventListener("dragstart", (e) => {
-        dragged_item = e.target;
-        e.dataTransfer.effectAllowed = "move";
-      });
+     // Mouse drag start
+input_container.addEventListener("dragstart", (e) => {
+  // Ensure the parent element (not the child) is being dragged
+  dragged_item = e.target.closest('.draggable');
+  e.dataTransfer.effectAllowed = "move";
+});
 
-      // Touch start equivalent to drag start
-      input_container.addEventListener("touchstart", (e) => {
-        dragged_item = e.target;
-      });
+// Touch start equivalent to drag start
+input_container.addEventListener("touchstart", (e) => {
+  // Ensure the parent element (not the child) is being dragged
+  dragged_item = e.target.closest('.draggable');
+});
 
       // Mouse drag over
       input_container.addEventListener("dragover", (e) => {
