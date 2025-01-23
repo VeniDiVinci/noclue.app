@@ -320,4 +320,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // summary.appendChild(exclamation);
     }
   });
+
+  document.querySelectorAll("tr").forEach((row) => {
+      row.addEventListener("click", () => {í
+        document.querySelectorAll("tr").forEach((row) => {
+          row.style.color = getComputedStyle(document.documentElement).getPropertyValue('--valtozo-fekete').trim();
+        });
+        row.style.color = getComputedStyle(document.documentElement).getPropertyValue('--tema-szin').trim();
+      });
+    });
 });
